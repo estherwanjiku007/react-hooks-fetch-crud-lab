@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
-function QuestionForm(props) {
+function QuestionForm({AllTheData}) {
   const [formData, setFormData] = useState({
     prompt: "",
     answer1: "",
@@ -9,6 +9,30 @@ function QuestionForm(props) {
     answer4: "",
     correctIndex: 0,
   });
+  useEffect(()=>{
+    HandleFetch()
+  },formData)
+  const HandleFetch=async()=>{
+   try{ const AllData=await fetch("http://localhost:4000/questions",{
+      method :"POST",
+      headers :{
+        "Content-Type" :"application/json"
+      },
+      body:JSON.stringify(formData)
+      
+    })
+   if(AllData.ok){
+     AllTheData()
+    }
+    //else{
+     // console.log(error)
+     // }
+   }
+    catch(error){
+       console.log(error)
+    }
+  
+}
 
   function handleChange(event) {
     setFormData({
@@ -84,7 +108,7 @@ function QuestionForm(props) {
             <option value="3">{formData.answer4}</option>
           </select>
         </label>
-        <button type="submit">Add Question</button>
+        <button type="submit" onClick={handleSubmit}>Add Question</button>
       </form>
     </section>
   );
