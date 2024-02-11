@@ -35,10 +35,15 @@ function QuestionForm({AllTheData}) {
 }
 
   function handleChange(event) {
+    const name=event.target.name
+    const value=event.target.value
     setFormData({
       ...formData,
-      [event.target.name]: event.target.value,
+      [name]: value,
     });
+    console.log(event.target)
+    console.log(event.target)
+    console.log(formData)
   }
 
   function handleSubmit(event) {

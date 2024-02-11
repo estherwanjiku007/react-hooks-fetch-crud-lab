@@ -14,22 +14,40 @@ function QuestionList() {
     console.log(AllData)
   }
   console.log(AllQTs)
-  const myQts=[...AllQTs]
-  function DeleteData(id){
-   myQts.filter(()=>{
-    return (
-      <li>{myQts.id===id}</li>)
-   })
+ // const myQts=[...AllQTs]
+ async function DeleteData(id){
+  // myQts.filter(()=>{
+   // return (
+     // <li>{myQts.id===id}</li>)
+ //  })
+
+ try{const allMyData=await fetch(`http://localhost:4000/questions/${id}`,{
+  method:"DELETE"
+ })
+ console.log(id)
+ if(allMyData.ok){
+  setAllQts(AllQTs.filter((qts)=>qts.id===id)
+  )
+ }
+ else{
+  console.log("failed to delete",allMyData.statusText)
+ }
+}
+
+ catch(error){
+  console.log("Failed to delete",error.statusText)
+ }
+ 
   }
-  const displayQts=AllQTs.map((qts)=>{
+  const displayQts=AllQTs.map((qts,index)=>{
     return(      
         <form>
-          <label key={qts.id}>{qts.prompt}
-          <button>Delete</button>
+          <label key={index}>{qts.prompt}          
           </label>
           <select name="answers" id="answers">             
                   <option>{qts.answers}</option>
                    </select>
+                   <button onClick={()=>DeleteData(qts.id)}>Delete</button>
           </form>
        
     )
