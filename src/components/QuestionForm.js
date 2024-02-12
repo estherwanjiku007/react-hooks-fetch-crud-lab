@@ -9,9 +9,17 @@ function QuestionForm({AllTheData}) {
     answer4: "",
     correctIndex: 0,
   });
-  useEffect(()=>{
-    HandleFetch()
-  },formData)
+  function handleChange(event) {
+    const name=event.target.name
+    const value=event.target.value
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+    
+  }
+  
+  
   const HandleFetch=async()=>{
    try{ const AllData=await fetch("http://localhost:4000/questions",{
       method :"POST",
@@ -24,33 +32,18 @@ function QuestionForm({AllTheData}) {
    if(AllData.ok){
      AllTheData()
     }
-    //else{
-     // console.log(error)
-     // }
+    else{
+      console.log("Failed to post ")
+     }
    }
     catch(error){
        console.log(error)
-    }
-  
+    }  
 }
-
-  function handleChange(event) {
-    const name=event.target.name
-    const value=event.target.value
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-    console.log(event.target)
-    console.log(event.target)
-    console.log(formData)
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log(formData);
-  }
-
+function handleSubmit(event) {
+  event.preventDefault();
+  HandleFetch()
+}
   return (
     <section>
       <h1>New Question</h1>
@@ -113,7 +106,7 @@ function QuestionForm({AllTheData}) {
             <option value="3">{formData.answer4}</option>
           </select>
         </label>
-        <button type="submit" onClick={handleSubmit}>Add Question</button>
+        <button type="submit" onClick={handleSubmit} >Add Question</button>
       </form>
     </section>
   );

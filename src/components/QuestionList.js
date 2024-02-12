@@ -10,10 +10,10 @@ function QuestionList() {
     const response=await fetch("http://localhost:4000/questions")
     const AllData=await response.json()
     setAllQts(AllData)
-    console.log(AllQTs)
-    console.log(AllData)
+   // console.log(AllQTs)
+    //console.log(AllData)
   }
-  console.log(AllQTs)
+ // console.log(AllQTs)
  // const myQts=[...AllQTs]
  async function DeleteData(id){
   // myQts.filter(()=>{
@@ -26,7 +26,7 @@ function QuestionList() {
  })
  console.log(id)
  if(allMyData.ok){
-  setAllQts(AllQTs.filter((qts)=>qts.id===id)
+  setAllQts(AllQTs.filter((qts)=>qts.id!==id)
   )
  }
  else{
@@ -45,7 +45,7 @@ function QuestionList() {
           <label key={index}>{qts.prompt}          
           </label>
           <select name="answers" id="answers">             
-                  <option>{qts.answers}</option>
+                  <option key={index}>{qts.answers}</option>
                    </select>
                    <button onClick={()=>DeleteData(qts.id)}>Delete</button>
           </form>
@@ -55,8 +55,8 @@ function QuestionList() {
   return (
     <div>
     <section>
-      <h1>Quiz Questions</h1>
-      <ul>
+      <h1 >Quiz Questions</h1>
+      <ul key={AllQTs.id}>
         {/* display QuestionItem components here after fetching */}
         {displayQts}
         </ul>
