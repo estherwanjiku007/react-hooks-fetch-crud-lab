@@ -1,6 +1,7 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 
 function QuestionForm({AllTheData}) {
+  
   const [formData, setFormData] = useState({
     prompt: "",
     answer1: "",
@@ -9,6 +10,8 @@ function QuestionForm({AllTheData}) {
     answer4: "",
     correctIndex: 0,
   });
+  const answers=[`${formData.answer1},${formData.answer2},${formData.answer3},${formData.answer4}`]
+  
   function handleChange(event) {
     const name=event.target.name
     const value=event.target.value
@@ -21,14 +24,19 @@ function QuestionForm({AllTheData}) {
   
   
   const HandleFetch=async()=>{
-   try{ const AllData=await fetch("http://localhost:4000/questions",{
+     
+   try{ const AllData=await fetch("http://localhost:5000/questions",{
       method :"POST",
       headers :{
         "Content-Type" :"application/json"
       },
-      body:JSON.stringify(formData)
+      body:JSON.stringify({
+        prompt:`${formData.prompt}`,
+        answers:answers,
+        correctIndex :[answers[0],answers[1],answers[2],answers[3]]
+      })
       
-    })
+    });
    if(AllData.ok){
      AllTheData()
     }
@@ -106,7 +114,7 @@ function handleSubmit(event) {
             <option value="3">{formData.answer4}</option>
           </select>
         </label>
-        <button type="submit" onClick={handleSubmit} >Add Question</button>
+        <button type="submit"  >Add Question</button>
       </form>
     </section>
   );
