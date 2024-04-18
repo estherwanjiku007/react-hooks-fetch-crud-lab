@@ -7,7 +7,7 @@ function QuestionList() {
     FetchData()
   },[])
   const FetchData=async()=>{
-    const response=await fetch("http://localhost:5000/questions")
+    const response=await fetch("http://localhost:4000/questions")
     const AllData=await response.json()
     setAllQts(AllData)
    // console.log(AllQTs)
@@ -21,7 +21,7 @@ function QuestionList() {
      // <li>{myQts.id===id}</li>)
  //  })
 
- try{const allMyData=await fetch(`http://localhost:5000/questions/${id}`,{
+ try{const allMyData=await fetch(`http://localhost:4000/questions/${id}`,{
   method:"DELETE"
  })
  console.log(id)
@@ -54,7 +54,7 @@ function QuestionList() {
   })
   return (
     <div>
-    <section>
+    <section key={AllQTs.id}>
       <h1 >Quiz Questions</h1>
       <ul key={AllQTs.id}>
         {/* display QuestionItem components here after fetching */}

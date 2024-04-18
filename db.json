@@ -1,255 +1,56 @@
 {
   "questions": [
     {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 28
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 29
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 31
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 32
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 33
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 34
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 35
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 36
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 37
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 38
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 39
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 40
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 41
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 42
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 43
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 44
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 45
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 46
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 47
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 48
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 49
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 50
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 51
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 52
-    },
-    {
-      "prompt": "",
-      "answer1": "",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
-      "correctIndex": 0,
-      "id": 53
-    },
-    {
-      "prompt": "vwehuiwufwe",
+      "prompt": "What is your fav colour?",
       "answers": [
-        "jhualgbxuidal,asjcbaihcas,as;chduilaxdh,qejihfuiwefhwe"
+        "Red,Blue,Green,Black"
       ],
       "correctIndex": [
-        "jhualgbxuidal,asjcbaihcas,as;chduilaxdh,qejihfuiwefhwe",
+        "Red,Blue,Green,Black",
         null,
         null,
         null
       ],
-      "id": 54
+      "id": 61
     },
     {
-      "prompt": "vwehuiwufwe",
+      "prompt": "What is your fav colour?",
       "answers": [
-        "jhualgbxuidal,asjcbaihcas,as;chduilaxdh,qejihfuiwefhwe"
+        "Red,Blue,Green,Black"
       ],
       "correctIndex": [
-        "jhualgbxuidal,asjcbaihcas,as;chduilaxdh,qejihfuiwefhwe",
+        "Red,Blue,Green,Black",
         null,
         null,
         null
       ],
-      "id": 55
+      "id": 62
+    },
+    {
+      "prompt": "what is your name",
+      "answers": [
+        "Esther,Njeri,Muthoni,Wanjiku"
+      ],
+      "correctIndex": [
+        "Esther,Njeri,Muthoni,Wanjiku",
+        null,
+        null,
+        null
+      ],
+      "id": 63
+    },
+    {
+      "prompt": "Where would you like to visit when you grow up",
+      "answers": [
+        "Hawaii,Washington DC,New Delhi,Tokyo"
+      ],
+      "correctIndex": [
+        "Hawaii,Washington DC,New Delhi,Tokyo",
+        null,
+        null,
+        null
+      ],
+      "id": 64
     }
   ]
 }

@@ -10,7 +10,7 @@ function QuestionForm({AllTheData}) {
     answer4: "",
     correctIndex: 0,
   });
-  const answers=[`${formData.answer1},${formData.answer2},${formData.answer3},${formData.answer4}`]
+  let answers=[`${formData.answer1},${formData.answer2},${formData.answer3},${formData.answer4}`]
   
   function handleChange(event) {
     const name=event.target.name
@@ -25,7 +25,7 @@ function QuestionForm({AllTheData}) {
   
   const HandleFetch=async()=>{
      
-   try{ const AllData=await fetch("http://localhost:5000/questions",{
+   try{ const AllData=await fetch("http://localhost:4000/questions",{
       method :"POST",
       headers :{
         "Content-Type" :"application/json"
@@ -38,7 +38,7 @@ function QuestionForm({AllTheData}) {
       
     });
    if(AllData.ok){
-     AllTheData()
+   AllTheData()
     }
     else{
       console.log("Failed to post ")
